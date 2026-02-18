@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div style="background-color:antiquewhite;">
+            <img src="DPU_Logo.png" width = 200px alt="DPU_Logo">
+        </div>
+        <h1 style="color:brown">DY Patil Institute Of Technology</h1>
+    </header>
+    <div class="form-container">
+    <h2>DY Patil Admission Form</h2>
+
+    <form action="#" method="post">
+
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="course">Select Course</label>
+            <select id="course" name="course" required>
+                <option value="">-- Select Course --</option>
+                <option>B.Tech</option>
+                <option>MBA</option>
+                <option>BCA</option>
+                <option>MCA</option>
+                <option>BBA</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" name="address"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Application</button>
+
+    </form>
+</div>
+</body>
+</html>
