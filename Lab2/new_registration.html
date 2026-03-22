@@ -1,58 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DY Patil Institute Of Technology | New Registration</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div style="background-color:antiquewhite;">
-            <img src="DPU_Logo.png" width = 200px alt="DPU_Logo">
-        </div>
-        <h1 style="color:brown">DY Patil Institute Of Technology</h1>
-    </header>
-    <div class="form-container">
-    <h2>DY Patil Admission Form</h2>
+  <header>
+    <div class="brand">
+      <img src="DPU_Logo.png" class="brand-logo" alt="DY Patil Institute logo">
+      <h1>DY Patil Institute Of Technology</h1>
+    </div>
+  </header>
 
-    <form action="#" method="post">
+  <nav aria-label="Primary navigation">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="product.html">Departments</a></li>
+      <li><a href="contact_us.html">Contact Us</a></li>
+      <li><a href="new_registration.html">New Registration</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
 
+  <main>
+    <section class="form-container">
+      <h2>Admission Form</h2>
+      <form action="#" method="post">
         <div class="form-group">
-            <label for="fullname">Full Name</label>
-            <input type="text" id="fullname" name="fullname" required>
-        </div>
-
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required>
-        </div>
-
-        <div class="form-group">
-            <label for="course">Select Course</label>
-            <select id="course" name="course" required>
-                <option value="">-- Select Course --</option>
-                <option>B.Tech</option>
-                <option>MBA</option>
-                <option>BCA</option>
-                <option>MCA</option>
-                <option>BBA</option>
-            </select>
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required>
         </div>
 
         <div class="form-group">
-            <label for="address">Address</label>
-            <textarea id="address" name="address"></textarea>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="course">Select Course</label>
+          <select id="course" name="course" required>
+            <option value="">-- Select Course --</option>
+            <option>B.Tech</option>
+            <option>MBA</option>
+            <option>BCA</option>
+            <option>MCA</option>
+            <option>BBA</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" name="address"></textarea>
         </div>
 
         <button type="submit" class="submit-btn">Submit Application</button>
+      </form>
+    </section>
+  </main>
 
-    </form>
-</div>
+  <footer>
+    DY Patil Institute Of Technology | Shardul Raskar TCOB07
+  </footer>
 </body>
 </html>

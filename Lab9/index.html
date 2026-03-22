@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AngularJS Registration & Login</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<style>
+
+body{
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(120deg,#141E30,#243B55);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:0;
+}
+
+.container{
+width:400px;
+background:rgba(255,255,255,0.95);
+padding:30px;
+border-radius:15px;
+box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+h2{
+text-align:center;
+margin-bottom:18px;
+color:#1f2d3d;
+}
+
+label{
+font-weight:600;
+font-size:14px;
+color:#333;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:6px 0 14px 0;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:14px;
+transition:0.3s;
+}
+
+input:focus{
+border-color:#4A90E2;
+outline:none;
+box-shadow:0 0 6px rgba(74,144,226,0.5);
+}
+
+button{
+width:100%;
+padding:11px;
+background:linear-gradient(90deg,#4A90E2,#357ABD);
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:linear-gradient(90deg,#357ABD,#2C5EA8);
+transform:translateY(-1px);
+}
+
+hr{
+margin:25px 0;
+border:none;
+height:1px;
+background:#ddd;
+}
+
+.message{
+text-align:center;
+font-weight:600;
+margin-top:10px;
+color:#2e7d32;
+}
+
+</style>
+
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+<div class="container">
+
+<h2>Registration</h2>
+
+<form ng-submit="register()">
+
+<label>First Name</label>
+<input type="text" ng-model="user.fname" required>
+
+<label>Last Name</label>
+<input type="text" ng-model="user.lname" required>
+
+<label>Email</label>
+<input type="email" ng-model="user.email" required>
+
+<label>Mobile Number</label>
+<input type="tel" ng-model="user.mobile" pattern="[0-9]{10}" placeholder="Enter 10 digit number" required>
+
+<label>Username</label>
+<input type="text" ng-model="user.username" required>
+
+<label>Password</label>
+<input type="password" ng-model="user.password" required>
+
+<button type="submit">Register</button>
+
+</form>
+
+<p class="message">{{regMessage}}</p>
+
+<hr>
+
+<h2>Login</h2>
+
+<form ng-submit="login()">
+
+<label>Email</label>
+<input type="email" ng-model="loginUser.email" required>
+
+<label>Mobile Number</label>
+<input type="tel" ng-model="loginUser.mobile" required>
+
+<label>Username</label>
+<input type="text" ng-model="loginUser.username" required>
+
+<label>Password</label>
+<input type="password" ng-model="loginUser.password" required>
+
+<button type="submit">Login</button>
+
+</form>
+
+<p class="message">{{loginMessage}}</p>
+
+</div>
+
+<script>
+
+var app = angular.module("myApp", []);
+
+app.controller("myCtrl", function($scope){
+
+$scope.user = {};
+$scope.loginUser = {};
+
+$scope.register = function(){
+
+$scope.savedUser = angular.copy($scope.user);
+
+$scope.regMessage = "Registration Successful! Please login.";
+
+$scope.user = {};
+
+};
+
+$scope.login = function(){
+
+if($scope.loginUser.username == $scope.savedUser.username &&
+   $scope.loginUser.password == $scope.savedUser.password &&
+   $scope.loginUser.email == $scope.savedUser.email &&
+   $scope.loginUser.mobile == $scope.savedUser.mobile){
+
+$scope.loginMessage = "Login Successful! Welcome " + $scope.savedUser.fname;
+
+}
+else{
+
+$scope.loginMessage = "Invalid Login Details";
+
+}
+
+};
+
+});
+
+</script>
+
+</body>
+</html>

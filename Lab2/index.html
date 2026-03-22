@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        nav {
-            background-color: antiquewhite;
-            padding: 10px;
-        }
-        a {
-            text-decoration: none;
-            margin-right: 15px;
-            font-weight: bold;
-        }
-        </style>        
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DY Patil Institute Of Technology | Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div style="background-color:antiquewhite;">
-            <img src="DPU_Logo.png" width = 200px alt="DPU_Logo">
-        </div>
-        <h1 style="color:brown">DY Patil Institute Of Technology</h1>
-    </header>
-
-    <div>
-        <div><a href="about.html">About Us</a></div>
-        <div><a href="product.html">Product</a></div>
-        <div><a href="contact_us.html">Contact Us</a>
-        <div><a href="new_registration.html">New Registration</a></div>
-        <div><a href="login.html">Login</a></div>
-        </div>
+  <header>
+    <div class="brand">
+      <img src="DPU_Logo.png" class="brand-logo" alt="DY Patil Institute logo">
+      <h1>DY Patil Institute Of Technology</h1>
     </div>
+  </header>
+
+  <nav aria-label="Primary navigation">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="product.html">Departments</a></li>
+      <li><a href="contact_us.html">Contact Us</a></li>
+      <li><a href="new_registration.html">New Registration</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h2>Welcome to DY Patil Institute Of Technology</h2>
+      <p>Explore programs, admissions, and campus updates from one place.</p>
+    </section>
+
+    <section class="grid" aria-label="Quick links">
+      <article class="card">
+        <h2>Admissions</h2>
+        <p>Apply online and track your admission process easily.</p>
+        <p><a href="new_registration.html">Start Registration</a></p>
+      </article>
+
+      <article class="card">
+        <h2>Departments</h2>
+        <p>See available engineering departments and seat details.</p>
+        <p><a href="product.html">View Departments</a></p>
+      </article>
+
+      <article class="card">
+        <h2>Student Access</h2>
+        <p>Login to student services and account tools.</p>
+        <p><a href="login.html">Go to Login</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    DY Patil Institute Of Technology | Shardul Raskar TCOB07
+  </footer>
 </body>
 </html>
